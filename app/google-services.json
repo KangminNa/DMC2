@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "811961424275",
+    "project_id": "dmc2-e5d29",
+    "storage_bucket": "dmc2-e5d29.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:811961424275:android:1cdc920f35dbcfa9ccf066",
+        "android_client_info": {
+          "package_name": "com.monthlycoding.dmc2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "811961424275-kslrbhas3jehmutrka92mbcck8qvqbje.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9Og2AQFC-0pNTFEr3uhs7ax1c1_Hs6no"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "811961424275-kslrbhas3jehmutrka92mbcck8qvqbje.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
