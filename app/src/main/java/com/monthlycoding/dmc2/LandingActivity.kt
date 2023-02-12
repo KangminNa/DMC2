@@ -3,10 +3,10 @@ package com.monthlycoding.dmc2
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 
 class LandingActivity : AppCompatActivity() {
     private val imgLogo: ImageView by lazy { findViewById(R.id.landing_logo) }
@@ -19,9 +19,11 @@ class LandingActivity : AppCompatActivity() {
         imgAnimation()
     }
 
-    private fun imgAnimation(){
-        val imgLogoFadeIn = ObjectAnimator.ofFloat(imgLogo, "alpha", 0f, 1f).apply { duration = 3000 }
-        val imgTitleFadeIn = ObjectAnimator.ofFloat(imgTitle, "alpha", 0f, 1f).apply { duration = 3000 }
+    private fun imgAnimation() {
+        val imgLogoFadeIn =
+            ObjectAnimator.ofFloat(imgLogo, "alpha", 0f, 1f).apply { duration = 3000 }
+        val imgTitleFadeIn =
+            ObjectAnimator.ofFloat(imgTitle, "alpha", 0f, 1f).apply { duration = 3000 }
 
         AnimatorSet().apply {
             play(imgLogoFadeIn)
