@@ -8,13 +8,13 @@ import android.os.Handler
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 
-class LandingActivity : AppCompatActivity() {
+class Landing_First_Activity : AppCompatActivity() {
     private val imgLogo: ImageView by lazy { findViewById(R.id.landing_logo) }
     private val imgTitle: ImageView by lazy { findViewById(R.id.landing_title) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_landing)
+        setContentView(R.layout.activity_first_landing)
 
         imgAnimation()
     }
@@ -32,7 +32,7 @@ class LandingActivity : AppCompatActivity() {
         } // image의 애니메이션화, 점점 나타나게
 
         Handler().postDelayed({
-            val intent = Intent(this@LandingActivity, MainActivity::class.java)
+            val intent = Intent(this@Landing_First_Activity, MainActivity::class.java)
             startActivity(intent)
             finish()
         }, 4000) // 4초후 Landing2 액티비티로 이동

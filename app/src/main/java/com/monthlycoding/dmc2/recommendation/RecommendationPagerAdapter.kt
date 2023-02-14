@@ -13,7 +13,7 @@ class RecommendationPagerAdapter(fragment: Fragment) : FragmentStateAdapter(frag
         return when (position) {
             0 -> TotalFragment() // 첫 번째 페이지
             1 -> PlayFragment() // 두 번째 페이지
-            2 -> FoodFragment() // 세 번째 페이지
+            2 -> Food_Fragment() // 세 번째 페이지
             3 -> SchoolTipFragment() // 네 번째 페이지
             else -> throw IllegalStateException("Unexpected position $position")
         }

@@ -14,11 +14,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         initBinding()
+        supportFragmentManager.beginTransaction().add(R.id.fragment_container_view_tag, HomeFragment()).commit()
         initNavigationBar()
 
 
     }
+
+
 
     private fun initBinding() {
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -33,6 +37,7 @@ class MainActivity : AppCompatActivity() {
             .commit()
     }
 
+
     private fun initNavigationBar() {
         binding.bottomBar.setOnTabSelectListener(object : AnimatedBottomBar.OnTabSelectListener {
             override fun onTabSelected(
@@ -41,6 +46,7 @@ class MainActivity : AppCompatActivity() {
                 newIndex: Int,
                 newTab: AnimatedBottomBar.Tab
             ) {
+
                 when (newIndex) {
                     0 -> changeFragment(HomeFragment())
                     1 -> changeFragment(CategoryFragment())
@@ -52,12 +58,12 @@ class MainActivity : AppCompatActivity() {
 
             // An optional method that will be fired whenever an already selected tab has been selected again.
             override fun onTabReselected(index: Int, tab: AnimatedBottomBar.Tab) {
-                when (index) {
-                    0 -> changeFragment(HomeFragment())
-                    1 -> changeFragment(CategoryFragment())
-                    2 -> changeFragment(MapFragment())
-                    else -> changeFragment(SearchFragment())
-                }
+//                when (index) {
+//                    0 -> changeFragment(HomeFragment())
+//                    1 -> changeFragment(CategoryFragment())
+//                    2 -> changeFragment(MapFragment())
+//                    else -> changeFragment(SearchFragment())
+//                }
                 Log.d("bottom_bar", "Reselected index: $index, title: ${tab.title}")
             }
         })
