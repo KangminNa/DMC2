@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.monthlycoding.dmc2.R
 
-class Food_Fragment : Fragment() {
+class Food_Around_Fragment : Fragment() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,7 +19,7 @@ class Food_Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_foodd, container, false)
+        return inflater.inflate(R.layout.fragment_food_around, container, false)
     }
 
 }

@@ -7,6 +7,7 @@
     tools:context=".CategoryFragment">
 
    <LinearLayout
+       android:id="@+id/menu_Category_bg"
        android:layout_width="match_parent"
        android:layout_height="350dp"
        android:orientation="horizontal"
@@ -18,6 +19,7 @@
 
    </LinearLayout>
     <ImageView
+        android:id="@+id/menu_Title_Img"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginLeft="20dp"
@@ -26,6 +28,114 @@
         app:layout_constraintTop_toTopOf="parent"
         android:src="@drawable/menu"
         />
+
+    <LinearLayout
+        android:id="@+id/menu_category_line1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/menu_Title_Img"
+        app:layout_constraintTop_toBottomOf="@+id/menu_Title_Img"
+        >
+
+            <ImageButton
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:contentDescription="menu_PC"
+                />
+            <ImageButton
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:contentDescription="menu_Song"
+                />
+            <ImageButton
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:contentDescription="menu_Korean_Food"
+                />
+            <ImageButton
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:contentDescription="menu_Japanese_Food"
+                />
+            <ImageButton
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:contentDescription="menu_Bar"
+                />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/menu_category_line2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/menu_category_line1"
+        app:layout_constraintTop_toBottomOf="@+id/menu_category_line1"
+        >
+        <ImageButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:contentDescription="menu_6"
+            />
+        <ImageButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:contentDescription="menu_7"
+            />
+        <ImageButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:contentDescription="menu_8"
+            />
+        <ImageButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:contentDescription="menu_9"
+            />
+        <ImageButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:contentDescription="menu_10"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/menu_category_line3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/menu_category_line2"
+        app:layout_constraintTop_toBottomOf="@+id/menu_category_line2"
+        >
+        <ImageButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:contentDescription="menu_11"
+            />
+        <ImageButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:contentDescription="menu_12"
+            />
+        <ImageButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:contentDescription="menu_13"
+            />
+        <ImageButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:contentDescription="menu_14"
+            />
+        <ImageButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:contentDescription="menu_15"
+            />
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
