@@ -29,7 +29,7 @@ class HomeFragment : Fragment() {
         viewPager.adapter = adapter
         viewPager.isUserInputEnabled = false
         val tabLayout = binding.tabLayout
-        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+        TabLayoutMediator(tabLayout, viewPager, true, false) { tab, position ->
             // 탭 제목을 설정합니다.
             when (position) {
                 0 -> tab.text = "전체"
