@@ -16,12 +16,12 @@ class MainActivity : AppCompatActivity() {
 
 
         initBinding()
-        supportFragmentManager.beginTransaction().add(R.id.fragment_container_view_tag, HomeFragment()).commit()
+        supportFragmentManager.beginTransaction()
+            .add(R.id.fragment_container_view_tag, HomeFragment()).commit()
         initNavigationBar()
 
 
     }
-
 
 
     private fun initBinding() {

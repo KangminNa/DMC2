@@ -27,11 +27,17 @@ class HomeFragment : Fragment() {
         val viewPager = binding.viewPager
         val adapter = RecommendationPagerAdapter(this)
         viewPager.adapter = adapter
-
+        viewPager.isUserInputEnabled = false
         val tabLayout = binding.tabLayout
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             // 탭 제목을 설정합니다.
-            tab.text = "Tab $position"
+            when (position) {
+                0 -> tab.text = "전체"
+                1 -> tab.text = "놀거리"
+                2 -> tab.text = "먹거리"
+                3 -> tab.text = "학교꿀팁"
+
+            }
         }.attach()
 
     }
