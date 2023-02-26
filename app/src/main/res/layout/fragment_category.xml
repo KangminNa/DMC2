@@ -40,6 +40,7 @@
         >
 
             <ImageButton
+                android:id="@+id/category_line1_1"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
                 android:contentDescription="menu_PC"
@@ -135,6 +136,21 @@
             android:layout_height="75dp"
             android:contentDescription="menu_15"
             />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/menu_Category_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="50dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <!-- 바텀 시트에 표시할 뷰를 추가합니다. -->
+
     </LinearLayout>
 
 
