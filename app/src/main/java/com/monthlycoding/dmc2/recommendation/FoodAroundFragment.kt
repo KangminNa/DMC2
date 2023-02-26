@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.monthlycoding.dmc2.R
 
-class Food_Around_Fragment : Fragment() {
+class FoodAroundFragment : Fragment() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

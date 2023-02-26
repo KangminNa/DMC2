@@ -1,141 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".CategoryFragment">
 
-   <LinearLayout
-       android:id="@+id/menu_Category_bg"
-       android:layout_width="match_parent"
-       android:layout_height="350dp"
-       android:orientation="horizontal"
-       android:background="#F3F4F7"
-       app:layout_constraintTop_toTopOf="parent"
-       app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintEnd_toEndOf="parent"
-       >
+    <LinearLayout
+        android:id="@+id/menu_Category_bg"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="#F3F4F7"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-   </LinearLayout>
+    </LinearLayout>
+
     <ImageView
         android:id="@+id/menu_Title_Img"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="30dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:src="@drawable/menu"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/menu_category_line1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginTop="10dp"
+        android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="@id/menu_Title_Img"
-        app:layout_constraintTop_toBottomOf="@+id/menu_Title_Img"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/menu_Title_Img">
 
-            <ImageButton
-                android:id="@+id/category_line1_1"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:contentDescription="menu_PC"
-                />
-            <ImageButton
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:contentDescription="menu_Song"
-                />
-            <ImageButton
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:contentDescription="menu_Korean_Food"
-                />
-            <ImageButton
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:contentDescription="menu_Japanese_Food"
-                />
-            <ImageButton
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:contentDescription="menu_Bar"
-                />
+        <ImageButton
+            android:id="@+id/category_line1_1"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:contentDescription="menu_PC" />
+
+        <ImageButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:contentDescription="menu_Song" />
+
+        <ImageButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:contentDescription="menu_Korean_Food" />
+
+        <ImageButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:contentDescription="menu_Japanese_Food" />
+
+        <ImageButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:contentDescription="menu_Bar" />
 
 
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/menu_category_line2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="@id/menu_category_line1"
-        app:layout_constraintTop_toBottomOf="@+id/menu_category_line1"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/menu_category_line1">
+
         <ImageButton
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:contentDescription="menu_6"
-            />
+            android:contentDescription="menu_6" />
+
         <ImageButton
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:contentDescription="menu_7"
-            />
+            android:contentDescription="menu_7" />
+
         <ImageButton
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:contentDescription="menu_8"
-            />
+            android:contentDescription="menu_8" />
+
         <ImageButton
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:contentDescription="menu_9"
-            />
+            android:contentDescription="menu_9" />
+
         <ImageButton
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:contentDescription="menu_10"
-            />
+            android:contentDescription="menu_10" />
 
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/menu_category_line3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="@id/menu_category_line2"
-        app:layout_constraintTop_toBottomOf="@+id/menu_category_line2"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/menu_category_line2">
+
         <ImageButton
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:contentDescription="menu_11"
-            />
+            android:contentDescription="menu_11" />
+
         <ImageButton
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:contentDescription="menu_12"
-            />
+            android:contentDescription="menu_12" />
+
         <ImageButton
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:contentDescription="menu_13"
-            />
+            android:contentDescription="menu_13" />
+
         <ImageButton
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:contentDescription="menu_14"
-            />
+            android:contentDescription="menu_14" />
+
         <ImageButton
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:contentDescription="menu_15"
-            />
+            android:contentDescription="menu_15" />
     </LinearLayout>
 
     <LinearLayout
@@ -143,20 +140,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/menu_Category_bg"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:behavior_hideable="true"
-        app:behavior_peekHeight="50dp"
-        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+        app:layout_constraintTop_toBottomOf="@+id/menu_Category_bg">
 
-        <!-- 바텀 시트에 표시할 뷰를 추가합니다. -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="test"
-            android:textSize="30sp"
+            android:text="한식"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-            />
+        <!-- 바텀 시트에 표시할 뷰를 추가합니다. -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/category_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </LinearLayout>
 
 
