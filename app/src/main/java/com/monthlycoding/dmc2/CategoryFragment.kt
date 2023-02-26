@@ -22,19 +22,8 @@ class CategoryFragment : Fragment() {
     ): View? {
         _binding = FragmentCategoryBinding.inflate(inflater, container, false)
 
-        val bottomSheet = _binding!!.bottomSheet
-        bottomSheetBehavior = BottomSheetBehavior.from(bottomSheet)
-
-        bottomSheetBehavior.peekHeight = resources.getDimensionPixelSize(R.dimen.peek_height)
 
 
-        _binding!!.categoryLine11.setOnClickListener {
-            if (bottomSheetBehavior.state == BottomSheetBehavior.STATE_HIDDEN) {
-                bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
-            } else {
-                bottomSheetBehavior.state = BottomSheetBehavior.STATE_HIDDEN
-            }
-        }
 
         return binding.root
     }
