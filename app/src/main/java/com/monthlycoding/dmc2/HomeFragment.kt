@@ -5,8 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.viewpager2.widget.ViewPager2
+import com.bumptech.glide.Glide
 import com.google.android.material.tabs.TabLayoutMediator
 import com.monthlycoding.dmc2.databinding.FragmentHomeBinding
+import com.monthlycoding.dmc2.recommendation.ImageSliderAdapter
 import com.monthlycoding.dmc2.recommendation.RecommendationPagerAdapter
 
 class HomeFragment : Fragment() {
@@ -24,6 +27,7 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val bannerImageSlider: ViewPager2 // banner
         val viewPager = binding.viewPager
         val adapter = RecommendationPagerAdapter(this)
         viewPager.adapter = adapter
@@ -39,6 +43,13 @@ class HomeFragment : Fragment() {
 
             }
         }.attach()
+        bannerImageSlider = binding.landingBanner
+        val imageList = listOf(
+            R.drawable.banner1,
+            R.drawable.banner2
+        )
+        val imageSliderAdapter = ImageSliderAdapter(this, imageList)
+        bannerImageSlider.adapter = imageSliderAdapter
 
     }
 
