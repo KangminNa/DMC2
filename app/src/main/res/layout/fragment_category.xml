@@ -218,7 +218,7 @@
             android:id="@+id/recyclerview_menu_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="한식"
+            android:text="노래방"
             android:textSize="20sp"
             android:textStyle="bold" />
 

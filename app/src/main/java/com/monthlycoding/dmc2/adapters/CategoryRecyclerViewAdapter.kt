@@ -19,7 +19,8 @@ import com.monthlycoding.dmc2.recommendation.ImageSliderAdapter
 
 
 class CategoryRecyclerViewAdapter(
-    val mContext: Context
+    val mContext: Context,
+    val buttonOption: String
 ) : RecyclerView.Adapter<CategoryRecyclerViewAdapter.MyViewHolder>() {
     var foodAndPlay = arrayListOf<CategoryData>()
     val firestore = FirebaseFirestore.getInstance()
@@ -30,8 +31,10 @@ class CategoryRecyclerViewAdapter(
             foodAndPlay.clear()
 
             for (snapshot in querySnapshot!!.documents) {
-                var item = snapshot.toObject(CategoryData::class.java)
-                foodAndPlay.add(item!!)
+                if (snapshot.getString("categoryGroup")!!.contains(buttonOption)) {
+                    var item = snapshot.toObject(CategoryData::class.java)
+                    foodAndPlay.add(item!!)
+                }
             }
             notifyDataSetChanged()
         }
