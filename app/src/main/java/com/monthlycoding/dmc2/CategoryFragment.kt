@@ -1,21 +1,17 @@
 package com.monthlycoding.dmc2
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
-import android.widget.LinearLayout
 import android.widget.TableRow
 import androidx.core.view.children
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.google.android.material.bottomsheet.BottomSheetBehavior
-import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
@@ -26,13 +22,9 @@ import com.monthlycoding.dmc2.datas.CategoryData
 class CategoryFragment : Fragment() {
     private var _binding: FragmentCategoryBinding? = null
     private val binding get() = _binding!!
-    private lateinit var bottomSheetBehavior: BottomSheetBehavior<LinearLayout>
-    val mCategoryDatas = ArrayList<CategoryData>()
     lateinit var mAdapter: CategoryRecyclerViewAdapter
+    lateinit var intent : Intent
 
-    var firestore : FirebaseFirestore? = null
-
-    //lateinit var load : ImageButton
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -46,6 +38,7 @@ class CategoryFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // 15개 버튼 중
         var buttonOption = "노래방"
 
         mAdapter = CategoryRecyclerViewAdapter(requireContext(), buttonOption)
@@ -74,5 +67,15 @@ class CategoryFragment : Fragment() {
 
                 Log.d("test1", buttonOption)
             }}
+
+        mAdapter.itemClickListener = object : CategoryRecyclerViewAdapter.OnItemClickListener {
+            override fun onItemClick(id: Int) {
+                //intent = Intent(activity, RecommandDetailActivity::class.java)
+                Log.d("test2", id.toString())
+                //intent.putExtra("title", )
+                //startActivity(intent)
+            }
+        }
+
     }
 }

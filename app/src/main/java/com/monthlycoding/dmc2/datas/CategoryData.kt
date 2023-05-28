@@ -1,9 +1,10 @@
 package com.monthlycoding.dmc2.datas
 
 class CategoryData(
-    val categoryImage: String = "",
-    val categoryName: String = "",
-    val categoryTel: String = "",
-    val categoryAddress: String = "",
-    val categoryGroup: String = ""
+    val imgLink: String = "",
+    val name: String = "",
+    val phone: String = "",
+    val location: String = "",
+    val foodGroup: String = "",
+    val id: Int = 0
 )
