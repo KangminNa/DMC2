@@ -22,17 +22,15 @@ import kotlin.properties.Delegates
 
 class CategoryRecyclerViewAdapter(
     val mContext: Context,
-    val buttonOption: String,
     val foodAndPlay : List<CategoryData>,
     val onItemClickListener: OnItemClickListener,
 ) : RecyclerView.Adapter<MyViewHolder>() {
-    var categoryId : Int = 0
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view =
             LayoutInflater.from(mContext)
                 .inflate(R.layout.category_recommend_list_item, parent, false)
-        return MyViewHolder(view, onItemClickListener)
+        return MyViewHolder(view, onItemClickListener, mContext)
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
@@ -41,13 +39,6 @@ class CategoryRecyclerViewAdapter(
 
         // MyViewHolder도 일종의 클래스 이기 떄문에 멤버변수와 함수를 가지고 있을 수 있다.
         holder.bind(data)
-
-        /*holder.categoryItemView.setOnClickListener(View.OnClickListener{
-            override fun onClick(v: View) {
-                mPosition = holder.
-            }
-        })*/
-
     }
 
     override fun getItemCount() = foodAndPlay.size // 목록의 갯수가 리턴
