@@ -9,6 +9,7 @@ import com.bumptech.glide.Glide
 import com.google.firebase.storage.FirebaseStorage
 import com.monthlycoding.dmc2.databinding.ActivityRecommandDetailBinding
 import com.monthlycoding.dmc2.datas.CategoryData
+import com.monthlycoding.dmc2.datas.MenuData
 import com.monthlycoding.dmc2.util.getSerializableCompat
 
 class RecommendDetailActivity : AppCompatActivity() {
@@ -28,12 +29,31 @@ class RecommendDetailActivity : AppCompatActivity() {
         binding.tvVacationDetail.text = data.closed
         binding.tvCallNumber.text = data.phone
 
+        if (data.imgLink != "") uploadMenuImage(data.imgLink, binding.ivDetailImage)
+
+        val menu1 = intent.getSerializableCompat<MenuData>("menu1") ?: MenuData(id=0, price=0, menu="", menuImgLink="")
+        val menu2 = intent.getSerializableCompat<MenuData>("menu2") ?: MenuData(id=0, price=0, menu="", menuImgLink="")
+        val menu3 = intent.getSerializableCompat<MenuData>("menu3") ?: MenuData(id=0, price=0, menu="", menuImgLink="")
+
+        binding.llMenu1Menu.text = menu1.menu
+        binding.llMenu2Menu.text = menu2.menu
+        binding.llMenu3Menu.text = menu3.menu
+        binding.llMenu1Price.text = menu1.price.toString()
+        binding.llMenu2Price.text = menu2.price.toString()
+        binding.llMenu3Price.text = menu3.price.toString()
+
+        if (menu1.menuImgLink != "") uploadMenuImage(menu1.menuImgLink, binding.llMenu1Image)
+        if (menu2.menuImgLink != "") uploadMenuImage(menu2.menuImgLink, binding.llMenu2Image)
+        if (menu3.menuImgLink != "") uploadMenuImage(menu3.menuImgLink, binding.llMenu3Image)
+    }
+
+    private fun uploadMenuImage(menuImgLink : String, imageView : android.widget.ImageView) {
         val storage : FirebaseStorage = FirebaseStorage.getInstance()
-        var storageRef = storage.getReference(data.imgLink)
+        var storageRef = storage.getReference(menuImgLink)
         storageRef.downloadUrl.addOnSuccessListener{ url ->
             Glide.with(binding.root)
                 .load(url)
-                .into(binding.ivDetailImage)
+                .into(imageView)
         }.addOnFailureListener {exception ->
             Log.w("CategoryFragment", "Error getting documents: $exception" )
         }

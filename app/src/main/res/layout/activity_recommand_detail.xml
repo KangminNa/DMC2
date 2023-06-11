@@ -158,6 +158,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_menu_title">
 
             <ImageView
+                android:id="@+id/ll_menu1_image"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
@@ -180,6 +181,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/ll_menu1_menu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -206,6 +208,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/ll_menu1_price"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -229,6 +232,7 @@
             app:layout_constraintTop_toTopOf="@id/ll_menu1">
 
             <ImageView
+                android:id="@+id/ll_menu2_image"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
@@ -251,6 +255,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/ll_menu2_menu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -279,6 +284,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/ll_menu2_price"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -301,6 +307,7 @@
             app:layout_constraintTop_toBottomOf="@id/tv_menu_title">
 
             <ImageView
+                android:id="@+id/ll_menu3_image"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
@@ -323,6 +330,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/ll_menu3_menu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -351,6 +359,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/ll_menu3_price"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

@@ -17,14 +17,17 @@ import com.monthlycoding.dmc2.adapters.CategoryRecyclerViewAdapter
 import com.monthlycoding.dmc2.adapters.OnItemClickListener
 import com.monthlycoding.dmc2.databinding.FragmentCategoryBinding
 import com.monthlycoding.dmc2.datas.CategoryData
+import com.monthlycoding.dmc2.datas.MenuData
 
 class CategoryFragment : Fragment(), OnItemClickListener {
     private var _binding: FragmentCategoryBinding? = null
     private val binding get() = _binding!!
-    lateinit var mAdapter: CategoryRecyclerViewAdapter
+    private lateinit var mAdapter: CategoryRecyclerViewAdapter
     private val firestore = FirebaseFirestore.getInstance()
     val storage = FirebaseStorage.getInstance()
-    val foodAndPlay = mutableListOf<CategoryData>()
+    private val foodAndPlay = mutableListOf<CategoryData>()
+    private val foodAndPlayDetail = mutableListOf<MenuData>()
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -60,6 +63,12 @@ class CategoryFragment : Fragment(), OnItemClickListener {
             binding.categoryRecyclerview.setHasFixedSize(true)
         }
 
+        firestore.collection("FoodAndPlay_Detail").get().addOnSuccessListener { result ->
+            for (snapshot in result) {
+                foodAndPlayDetail.add(snapshot.toObject(MenuData::class.java))
+            }
+        }
+
         // 15개 버튼이 눌릴 때 그에 맞는 리사이클러뷰를 출력함.
         getImageButtons()
             .forEach { imageButton ->
@@ -89,9 +98,17 @@ class CategoryFragment : Fragment(), OnItemClickListener {
         .filterIsInstance<ImageButton>()
         .toList()
 
-    override fun onItemClick(data : CategoryData) {
+    override fun onItemClick(categoryData : CategoryData) {
         val intent = RecommendDetailActivity.getIntent(requireContext())
-        intent.putExtra("info", data)
+        var i = 1
+
+        intent.putExtra("info", categoryData)
+
+        foodAndPlayDetail.filter { it.id == categoryData.id }.forEach { menu ->
+            intent.putExtra("menu" + i, menu)
+            i++
+        }
+
         startActivity(intent)
     }
 }
