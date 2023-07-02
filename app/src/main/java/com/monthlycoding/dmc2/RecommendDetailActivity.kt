@@ -31,13 +31,13 @@ class RecommendDetailActivity : AppCompatActivity() {
 
         if (data.imgLink != "") uploadMenuImage(data.imgLink, binding.ivDetailImage)
 
-        val menu1 = intent.getSerializableCompat<MenuData>("menu1") ?: MenuData(id=0, price=0, menu="", menuImgLink="")
-        val menu2 = intent.getSerializableCompat<MenuData>("menu2") ?: MenuData(id=0, price=0, menu="", menuImgLink="")
-        val menu3 = intent.getSerializableCompat<MenuData>("menu3") ?: MenuData(id=0, price=0, menu="", menuImgLink="")
+        val menu1 = intent.getSerializableCompat<MenuData>("menu1") ?: MenuData(foodId=0, price=0, menuName="", menuImgLink="")
+        val menu2 = intent.getSerializableCompat<MenuData>("menu2") ?: MenuData(foodId=0, price=0, menuName="", menuImgLink="")
+        val menu3 = intent.getSerializableCompat<MenuData>("menu3") ?: MenuData(foodId=0, price=0, menuName="", menuImgLink="")
 
-        binding.llMenu1Menu.text = menu1.menu
-        binding.llMenu2Menu.text = menu2.menu
-        binding.llMenu3Menu.text = menu3.menu
+        binding.llMenu1Menu.text = menu1.menuName
+        binding.llMenu2Menu.text = menu2.menuName
+        binding.llMenu3Menu.text = menu3.menuName
         binding.llMenu1Price.text = menu1.price.toString()
         binding.llMenu2Price.text = menu2.price.toString()
         binding.llMenu3Price.text = menu3.price.toString()

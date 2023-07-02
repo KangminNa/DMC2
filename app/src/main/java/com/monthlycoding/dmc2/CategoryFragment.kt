@@ -104,7 +104,7 @@ class CategoryFragment : Fragment(), OnItemClickListener {
 
         intent.putExtra("info", categoryData)
 
-        foodAndPlayDetail.filter { it.id == categoryData.id }.forEach { menu ->
+        foodAndPlayDetail.filter { it.foodId == categoryData.id }.forEach { menu ->
             intent.putExtra("menu" + i, menu)
             i++
         }
