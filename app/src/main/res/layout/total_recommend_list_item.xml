@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/recommend_image"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="170dp"
+        android:layout_height="180dp"
         android:gravity="center"
         android:src="@color/cardview_shadow_start_color"
         app:layout_constraintBottom_toBottomOf="parent"

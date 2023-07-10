@@ -17,38 +17,37 @@
         app:layout_constraintTop_toTopOf="parent">
     </LinearLayout>
 
+
     <ImageView
         android:id="@+id/menu_Title_Img"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
+        android:layout_width="64dp"
+        android:layout_height="34dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/menu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TableLayout
         android:id="@+id/category_table"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/menu_Title_Img">
 
         <TableRow
             android:id="@+id/menu_category_line1"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
             android:layout_marginTop="10dp"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:gravity="center"
             app:layout_constraintTop_toBottomOf="@+id/menu_Title_Img">
 
             <ImageButton
                 android:id="@+id/category_menu_noraebang"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:contentDescription="노래방"
                 android:padding="2dp"
                 android:scaleType="centerCrop"
@@ -56,36 +55,40 @@
 
             <ImageButton
                 android:id="@+id/category_menu_pcbang"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:contentDescription="PC방"
+                android:layout_marginLeft="15dp"
                 android:padding="2dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/pcbang" />
 
             <ImageButton
                 android:id="@+id/category_menu_activity"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:contentDescription="액티비티"
+                android:layout_marginHorizontal="15dp"
                 android:padding="2dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/activity" />
 
             <ImageButton
                 android:id="@+id/category_menu_hof"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:contentDescription="술집"
+                android:layout_marginRight="15dp"
                 android:padding="2dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/hof" />
 
             <ImageButton
                 android:id="@+id/category_menu_cafe"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:contentDescription="카페"
+
                 android:padding="2dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/cafe" />
@@ -95,17 +98,15 @@
 
         <TableRow
             android:id="@+id/menu_category_line2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
             app:layout_constraintTop_toBottomOf="@+id/menu_category_line1">
 
             <ImageButton
                 android:id="@+id/category_menu_japanese"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:contentDescription="일식"
                 android:padding="2dp"
                 android:scaleType="centerCrop"
@@ -113,35 +114,38 @@
 
             <ImageButton
                 android:id="@+id/category_menu_bunsik"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:contentDescription="분식"
+                android:layout_marginLeft="15dp"
                 android:padding="2dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/bunsik" />
 
             <ImageButton
                 android:id="@+id/category_menu_chinese"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:contentDescription="중식"
+                android:layout_marginHorizontal="15dp"
                 android:padding="2dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/chinese" />
 
             <ImageButton
                 android:id="@+id/category_menu_fastfood"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:contentDescription="패스트푸드"
+                android:layout_marginRight="15dp"
                 android:padding="2dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/fastfood" />
 
             <ImageButton
                 android:id="@+id/category_menu_korean"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:contentDescription="한식"
                 android:padding="2dp"
                 android:scaleType="centerCrop"
@@ -151,17 +155,15 @@
 
         <TableRow
             android:id="@+id/menu_category_line3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
             app:layout_constraintTop_toBottomOf="@+id/menu_category_line2">
 
             <ImageButton
                 android:id="@+id/category_menu_meat"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:contentDescription="고기집"
                 android:padding="2dp"
                 android:scaleType="centerCrop"
@@ -169,35 +171,38 @@
 
             <ImageButton
                 android:id="@+id/category_menu_schoolhoneytip"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:contentDescription="학교꿀팁"
+                android:layout_marginLeft="15dp"
                 android:padding="2dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/schoolhoneytip" />
 
             <ImageButton
                 android:id="@+id/category_menu_senpaiplay"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:contentDescription="선배추천(놀거리)"
+                android:layout_marginHorizontal="15dp"
                 android:padding="2dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/senpaiplay" />
 
             <ImageButton
                 android:id="@+id/category_menu_senpaieat"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:contentDescription="선배추천(먹거리)"
+                android:layout_marginRight="15dp"
                 android:padding="2dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/senpaieat" />
 
             <ImageButton
                 android:id="@+id/category_menu_school"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:contentDescription="학교헤택"
                 android:padding="2dp"
                 android:scaleType="centerCrop"
@@ -206,6 +211,16 @@
 
     </TableLayout>
 
+    <LinearLayout
+        android:id="@+id/menu_category_bg2"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        app:layout_constraintTop_toBottomOf="@id/menu_Category_bg"
+        android:orientation="horizontal"
+        android:background="@drawable/category_bg"
+        >
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/bottom_sheet"
@@ -219,14 +234,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="노래방"
-            android:textSize="20sp"
+            android:textSize="24sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="15dp"
             android:textStyle="bold" />
 
         <!-- 바텀 시트에 표시할 뷰를 추가합니다. -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/category_recyclerview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            />
     </LinearLayout>
 
 
